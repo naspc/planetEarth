@@ -3,12 +3,17 @@ import { OrbitControls } from 'https://unpkg.com/three@0.158.0/examples/jsm/cont
 import * as TWEEN from 'https://unpkg.com/@tweenjs/tween.js@18.6.4/dist/tween.esm.js';
 
 // ============================================================================
-// relative patb for images
+// FIXED: Use string paths for images, not import statements
 // ============================================================================
-// Just use string paths directly - no imports needed for images
+
+// Use string paths for texture loading
 const WorldMap = 'img/earth.jpg';
 const EarthNormalMap = 'img/earthNightt.jpg';
 const SpecMap = 'img/earthSpec.jpg';
+
+// ============================================================================
+// COUNTRY MARKER FIXES ONLY
+// ============================================================================
 
 const countryMarkers = [];
 const raycaster = new THREE.Raycaster();
@@ -120,6 +125,7 @@ async function createCountryMarkers() {
         
     } catch (error) {
         console.error('Error fetching country data:', error);
+        createTestMarkers(); // Fallback to test markers if API fails
     }
 }
 
@@ -230,7 +236,7 @@ const ambientLight = new THREE.AmbientLight(0xffffff, 0.4);
 scene.add(ambientLight);
 
 const lightMat = new THREE.MeshBasicMaterial({
-    map: loader.load("/img/earthNightt.jpg"),
+    map: loader.load('img/earthNightt.jpg'), // Fixed: use string path
     blending: THREE.AdditiveBlending,
     transparent: true,
     opacity: 0.8,
@@ -254,11 +260,11 @@ earthGroup.add(glowMesh);
 
 // CLOUDS - NO CHANGES
 const cloudsMat = new THREE.MeshStandardMaterial({
-    map: loader.load("/img/cloud.jpg"),
+    map: loader.load('img/cloud.jpg'), // Fixed: use string path
     transparent: true,
     opacity: 0.7,
     blending: THREE.AdditiveBlending,
-    alphaMap: loader.load('/img/clouds.jpg'),
+    alphaMap: loader.load('img/clouds.jpg'), // Fixed: use string path
 });
 const cloudsMesh = new THREE.Mesh(earthGeometry, cloudsMat);
 cloudsMesh.scale.setScalar(1.003);
@@ -336,7 +342,7 @@ function getStarfield({ numStars = 5000 } = {}) {
     
     const mat = new THREE.PointsMaterial({
         size: 1.2,
-        map: loader.load("/img/circle.png"),
+        map: loader.load('img/circle.png'), // Fixed: use string path
         transparent: true,
         blending: THREE.AdditiveBlending,
         depthWrite: false
