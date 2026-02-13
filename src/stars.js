@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@0.158.0/build/three.module.js';
 
 export default function getStarfield({ numStars = 500 } = {}) {
   function randomSpherePoint() {
@@ -35,7 +35,9 @@ export default function getStarfield({ numStars = 500 } = {}) {
   const mat = new THREE.PointsMaterial({
     size: 0.2,
     vertexColors: true,
-    map: new THREE.TextureLoader().load("img/circle.png")
+    map: new THREE.TextureLoader().load(
+      "img/circle.png"  
+    ),
   });
   const points = new THREE.Points(geo, mat);
   return points;
