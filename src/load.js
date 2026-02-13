@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+/*document.addEventListener('DOMContentLoaded', () => {
     const loader = document.createElement('div');
     loader.id = 'loading-screen';
     loader.style = `
@@ -103,3 +103,5 @@ document.addEventListener('DOMContentLoaded', () => {
     // Start typing sequence
     typeLine();
 });
+
+*/

@@ -1,6 +1,7 @@
 import * as THREE from 'https://unpkg.com/three@0.158.0/build/three.module.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.158.0/examples/jsm/controls/OrbitControls.js';
 import * as TWEEN from 'https://unpkg.com/@tweenjs/tween.js@18.6.4/dist/tween.esm.js';
+import getStarfield from './stars.js';
 
 // ============================================================================
 // FIXED: Use string paths for images, not import statements
@@ -326,31 +327,7 @@ window.addEventListener('resize', () => {
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-// STARS - NO CHANGES
-function getStarfield({ numStars = 5000 } = {}) {
-    const vertices = [];
-    for(let i = 0; i < numStars; i++) {
-        vertices.push(
-            Math.random() * 2000 - 1000,
-            Math.random() * 2000 - 1000,
-            Math.random() * 2000 - 1000
-        );
-    }
-    
-    const geo = new THREE.BufferGeometry();
-    geo.setAttribute("position", new THREE.Float32BufferAttribute(vertices, 3));
-    
-    const mat = new THREE.PointsMaterial({
-        size: 1.2,
-        map: loader.load('img/circle.png'), // Fixed: use string path
-        transparent: true,
-        blending: THREE.AdditiveBlending,
-        depthWrite: false
-    });
-    
-    return new THREE.Points(geo, mat);
-}
-
+// STARS - USING IMPORTED STARFIELD
 const stars = getStarfield({numStars: 5000});
 scene.add(stars);
 
