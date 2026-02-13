@@ -3,7 +3,7 @@ import { OrbitControls } from 'https://unpkg.com/three@0.158.0/examples/jsm/cont
 import WorldMap from '/img/earth.jpg';
 import EarthNormalMap from '/img/earthNightt.jpg';
 import SpecMap from '/img/earthSpec.jpg';
-import * as TWEEN from '@tweenjs/tween.js';
+import * as TWEEN from 'https://unpkg.com/@tweenjs/tween.js@18.6.4/dist/tween.esm.js';
 
 // ============================================================================
 // COUNTRY MARKER FIXES ONLY
