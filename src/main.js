@@ -1,8 +1,8 @@
 import * as THREE from 'https://unpkg.com/three@0.158.0/build/three.module.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.158.0/examples/jsm/controls/OrbitControls.js';
-import WorldMap from '/img/earth.jpg';
-import EarthNormalMap from '/img/earthNightt.jpg';
-import SpecMap from '/img/earthSpec.jpg';
+import WorldMap from 'img/earth.jpg';
+import EarthNormalMap from 'img/earthNightt.jpg';
+import SpecMap from 'img/earthSpec.jpg';
 import * as TWEEN from 'https://unpkg.com/@tweenjs/tween.js@18.6.4/dist/tween.esm.js';
 
 // ============================================================================
