@@ -1,15 +1,22 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="src/style.css" />
-
-    <title>Planet Earth</title>
-  </head>
-  <body>
-    <canvas id="display-canvas">  </canvas>
-    <script src="src/main.js" type="module"></script>
-    <script src="src/load.js" type="module"></script>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earth Visualization</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            font-family: 'Courier New', monospace;
+        }
+        #display-canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="display-canvas"></canvas>
+    <script type="module" src="/src/main.js"></script>
+</body>
 </html>

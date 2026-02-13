@@ -1,17 +1,15 @@
-import * as THREE from 'https://unpkg.com/three@0.158.0/build/three.module.js';
-import { OrbitControls } from 'https://unpkg.com/three@0.158.0/examples/jsm/controls/OrbitControls.js';
-import * as TWEEN from 'https://unpkg.com/@tweenjs/tween.js@18.6.4/dist/tween.esm.js';
+import * as THREE from 'three';
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls.js';
+import * as TWEEN from '@tweenjs/tween.js';
 import getStarfield from './stars.js';
 
 // ============================================================================
-// FIXED: Use string paths for images, not import statements
+// Use string paths for images
 // ============================================================================
 
-// Use string paths for texture loading
 const WorldMap = 'img/earth.jpg';
 const EarthNormalMap = 'img/earthNightt.jpg';
 const SpecMap = 'img/earthSpec.jpg';
-
 // ============================================================================
 // COUNTRY MARKER FIXES ONLY
 // ============================================================================
