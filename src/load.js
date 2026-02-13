@@ -1,4 +1,4 @@
-/*document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     const loader = document.createElement('div');
     loader.id = 'loading-screen';
     loader.style = `
@@ -103,5 +103,3 @@
     // Start typing sequence
     typeLine();
 });
-
-*/
