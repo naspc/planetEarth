@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             document.body.removeChild(loader);
             // Initialize your planet visualization here
-            initializePlanet(); 
+            //initializePlanet(); 
         }, 1000);
     });
 

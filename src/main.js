@@ -1,4 +1,4 @@
-import * as THREE from 'three';
+import * as THREE from 'https://unpkg.com/three@0.158.0/build/three.module.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import WorldMap from '/img/earth.jpg';
 import EarthNormalMap from '/img/earthNightt.jpg';
